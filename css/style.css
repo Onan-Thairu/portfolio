@@ -1,0 +1,17 @@
+html, body {
+    background-color: rgb(255, 255, 255);
+    margin: 0;
+    padding: 0;
+}
+
+#logo {
+    padding-left: 4%;
+    padding-top: 15px;
+}
+
+#onan {
+    display: flex;
+    margin: auto;
+    width: 140px;
+    border-radius: 50%;
+}
