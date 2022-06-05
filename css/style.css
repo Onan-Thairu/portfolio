@@ -2,16 +2,53 @@ html, body {
     background-color: rgb(255, 255, 255);
     margin: 0;
     padding: 0;
+    font-family: 'Sora', sans-serif;
 }
-
 #logo {
     padding-left: 4%;
-    padding-top: 15px;
+    padding-top: 10px;
 }
-
+.main {
+    text-align: center;
+}
 #onan {
-    display: flex;
-    margin: auto;
     width: 140px;
     border-radius: 50%;
+}
+.info {
+    font-size: 1.3em;
+}
+p {
+    line-height: 1.5em;
+    color: #0A122A;
+    font-weight: 600;
+}
+.highlight-paragraph {
+    color: #84ECB3;
+    font-weight: 800;
+}
+button {
+    border-radius: 7px;
+    padding: 10px;
+    min-width: 200px;
+    border: none;
+    background-color: #9FFFCB;
+}
+a {
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #0A122A;
+}
+#tech-stack {
+    font-size: 1.4em;
+}
+
+.socials img {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+footer p {
+    margin-bottom: 5px;
+    font-size:.8em;
 }
