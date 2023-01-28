@@ -15,6 +15,9 @@ html, body {
 .main {
     text-align: center;
 }
+.image {
+    margin-top: 2em;
+}
 
 /* animation code */
 
@@ -54,6 +57,7 @@ p {
 }
 .call-to-action {
     display: flex;
+    background-color: azure;
     justify-content: center;
     width: 50vw;
     margin: 4% auto;
