@@ -1,61 +1,168 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="scroll-smooth" lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Onan Thairu</title>
-    <!-- Add favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-</head>
-<body>
-    <div class="container">
-        <div>
-            <img src="css/assests/logo.svg" alt="logo" width="60px" height="60px" id="logo">
-        </div>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta name="description" content="Onan - Full-stack software developer specializing in modern web technologies"/>
+    <title>Onan | Software Developer</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#99f6e4",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0f172a",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .mint-dot {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #99f6e4;
+            border-radius: 50%;
+            z-index: -1;
+            top: -2px;
+            left: -4px;
+        }
         
-        <div class="main">
-            <div class="image">
-                <img src="css/assests/Onan_Thairu.jpeg" alt="Onan" id="onan">
-            </div>
-            <div class="info">
-                <p>Hello, my name is Onan.</p>
-                <p class="highlight-paragraph">I build software for the web.</p>
-                <p>You need a developer?</p>
-            </div>
-            <!-- <div class="call-to-action"> -->
-                <a href="mailto:thairuonan@gmail.com?subject = Work Enquiry" id="callToAction">Let's work together!</a>
-            <!-- </div> -->
-            <!-- <div class="stack">
-                <p id="tech-stack">Tech stack:</p>
-                <p class="lang-images"> 
-                    <img src="css/assests/react.svg" alt="react" width="30px" id="react"> <span>React</span>
-                    <img src="css/assests/ruby.svg" alt="ruby" width="30px" id="ruby"> <span>Ruby</span>
-                </p>
-            </div> -->
-            <div class="socials">
-<!--                 <div>
-                  <a href="https://github.com/Onan-Thairu" target="_blank"><img src="css/assests/github.svg" alt="github"></a>
-                </div>
-                <div>
-                  <a href="https://www.linkedin.com/in/onan-thairu/" target="_blank"><img src="css/assests/linkedin.svg" alt="linkedin"></a>
-                </div>
-                <div>
-                  <a href="https://twitter.com/byenari" target="_blank"><img src="css/assests/twitter.svg" alt="twitter"></a>
-                </div> -->
-            </div>
-        </div>
-        <!-- <footer>
-            <p>&copy; Onan Thairu | 2023 | thairuonan@gmail.com.</p>
-        </footer> -->
+        /* Ensure smooth theme transitions */
+        * {
+            transition-property: background-color, border-color, color;
+            transition-duration: 300ms;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 640px) {
+            .mint-dot {
+                width: 20px;
+                height: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100">
+    <!-- Theme Toggle Button -->
+    <div class="fixed top-4 right-4 sm:top-6 sm:right-6 z-50">
+        <button 
+            class="p-2 sm:p-3 rounded-full bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors shadow-lg"
+            onclick="document.documentElement.classList.toggle('dark')"
+            aria-label="Toggle dark mode">
+            <span class="material-symbols-outlined block dark:hidden text-xl sm:text-2xl">dark_mode</span>
+            <span class="material-symbols-outlined hidden dark:block text-xl sm:text-2xl">light_mode</span>
+        </button>
     </div>
-    <script src="index.js"></script>
+
+    <!-- Header -->
+    <header class="max-w-7xl mx-auto px-4 sm:px-6 py-6 sm:py-8 flex justify-between items-center">
+        <div class="relative flex items-center">
+            <div class="mint-dot"></div>
+            <span class="font-bold tracking-[0.2em] sm:tracking-[0.3em] text-base sm:text-lg pl-1">NAN</span>
+        </div>
+    </header>
+
+    <main class="max-w-4xl mx-auto px-4 sm:px-6">
+        <!-- Hero Section -->
+        <section class="min-h-[70vh] flex flex-col items-center justify-center text-center space-y-6 sm:space-y-8 pt-8 sm:pt-12 pb-16 sm:pb-24">
+            <div class="relative">
+                <div class="w-28 h-28 sm:w-32 sm:h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 bg-primary/10">
+                    <img 
+                        alt="Onan's Profile Portrait" 
+                        class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" 
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrz2pBGr22-vCYbswz00aX3MfkcF9xOdj6RTE0Rrgnt8TC09ukLCtDGuy2aYGJK0fp8agJM3tXbFe4KTw5OetVWnh2yL7mMGmqXYVgbFG7ZVYJbTmWwpT0cSacCQTnk_9oxgcLBf-DvBrS5yJyMLAd3Y2znVgdxDLjZ3pcShhxXJzc85HZmyjK7zSktPatRxD-9vP6WOGBhVoC8jM8y8vYEdkTBaGPWpP_Z7erFLbQhWxRrRkcCbGbAkzoIEnlApLYXQTzQh7e-j4"
+                        onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22160%22 height=%22160%22%3E%3Crect fill=%22%2399f6e4%22 width=%22160%22 height=%22160%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 font-size=%2264%22 fill=%22%230f172a%22%3EO%3C/text%3E%3C/svg%3E'"/>
+                </div>
+                <div class="absolute -bottom-2 -right-2 bg-primary text-slate-900 text-xs font-bold px-2 sm:px-3 py-1 rounded-full shadow-sm">
+                    Online
+                </div>
+            </div>
+
+            <div class="space-y-3 sm:space-y-4 px-4">
+                <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight">
+                    Hello, my name is <span class="text-slate-900 dark:text-white">Onan.</span>
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-emerald-500 dark:text-emerald-400 font-medium">
+                    I build software for the web.
+                </p>
+                <h2 class="text-lg sm:text-xl md:text-2xl text-slate-600 dark:text-slate-400">
+                    You need a developer?
+                </h2>
+            </div>
+
+            <a 
+                class="inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 bg-primary text-slate-900 font-semibold rounded-lg hover:brightness-105 active:scale-95 transition-all shadow-lg shadow-primary/20 text-sm sm:text-base" 
+                href="mailto:hello@onan.dev">
+                Let's work together!
+                <span class="material-symbols-outlined ml-2 text-base sm:text-lg">arrow_forward</span>
+            </a>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-16 sm:py-24 border-t border-slate-100 dark:border-slate-800" id="about">
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-xs sm:text-sm font-bold tracking-widest text-slate-400 dark:text-slate-500 uppercase mb-6 sm:mb-8">About Me</h3>
+                <div class="space-y-4 sm:space-y-6 text-base sm:text-lg leading-relaxed text-slate-600 dark:text-slate-300">
+                    <p>
+                        I'm a passionate full-stack developer with a focus on creating elegant, efficient solutions to complex problems. With a background in modern web technologies, I specialize in building responsive, accessible, and performant applications that provide exceptional user experiences.
+                    </p>
+                    <p>
+                        My philosophy is simple: clean code, thoughtful design, and a user-first approach. When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my journey through development.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Connect Section -->
+        <section class="py-16 sm:py-24 border-t border-slate-100 dark:border-slate-800">
+            <div class="max-w-2xl mx-auto text-center">
+                <h3 class="text-xs sm:text-sm font-bold tracking-widest text-slate-400 dark:text-slate-500 uppercase mb-8 sm:mb-12">Connect With Me</h3>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                    <a 
+                        class="w-full sm:w-auto flex items-center justify-center px-6 sm:px-8 py-3 bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 rounded-lg hover:opacity-90 transition-opacity text-sm sm:text-base" 
+                        href="https://github.com/Onan-Thairu" 
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        <svg class="w-5 h-5 mr-3 fill-current" viewBox="0 0 24 24">
+                            <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.43.372.823 1.102.823 2.222 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                        </svg>
+                        GitHub Profile
+                    </a>
+                    <a 
+                        class="w-full sm:w-auto flex items-center justify-center px-6 sm:px-8 py-3 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 rounded-lg transition-colors text-sm sm:text-base" 
+                        href="mailto:thairuonan@gmail.com">
+                        <span class="material-symbols-outlined mr-3 text-xl">mail</span>
+                        Contact Me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto py-8 sm:py-12 text-center text-slate-400 dark:text-slate-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 border-t border-slate-100 dark:border-slate-800 pt-6 sm:pt-8">
+            <p class="text-xs sm:text-sm">© 2026 Onan Thairu. Built with precision and passion.</p>
+        </div>
+    </footer>
 </body>
 </html>
